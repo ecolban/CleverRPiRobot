@@ -178,7 +178,7 @@ public class CleverRobot extends IRobotAdapter implements Runnable {
 
         try {
             triggers[sensorId].high();
-            Thread.sleep(10);
+            Thread.sleep(0, 5000); // 5us
             triggers[sensorId].low();
             System.out.println("Trigger pulse sent.");
             while (echos[sensorId].isLow()) {
